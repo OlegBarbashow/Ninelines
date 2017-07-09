@@ -1,0 +1,248 @@
+.page{
+	min-width: 700px;
+	font-size: 12px;
+	line-height: 22px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+	background-color: #F0F0F0;
+	color: #666;
+}
+
+.wrapper{
+	margin: 10px auto;
+	width: 660px;
+	outline: 0px solid red;
+}
+
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.partition{
+	background-image: url(../img/wrapper-bg.jpg);
+	background-repeat: repeat;
+	margin-bottom: 2px;
+	min-height: 250px;
+	padding: 0 20px;
+	outline: 0px solid red;
+}
+
+
+/*-----------------------personal--------------------*/
+.personal{
+	font-size: 12px;
+	line-height: 22px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.personal::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.personal-photo{
+	width: 140px;
+	float: left;
+	margin-top: 30px;
+	outline: 0px solid blue;
+}
+
+.personal-photo img{
+	width: 138px;
+	height: 138px;
+	border-radius: 69px;
+	-moz-border-radius: 69px;
+	-webkit-border-radius: 69px;
+	border-radius: 69px;
+}
+
+.personal-items{
+	width: 460px;
+	float: right;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	position: relative;
+	outline: 0px solid blue;
+}
+
+.personal-items::before{
+	content: "";
+	position: absolute;
+	top: 78px;
+	right: -16px;
+	height: 166px;
+	width: 184px;
+	background-image: url(../img/approved.png);
+	background-repeat: no-repeat;
+	outline: 0px solid blue;
+}
+
+.personal-item{
+	border-bottom: 2px solid #333;
+	padding-bottom: 4px;
+	padding-top: 28px;
+}
+
+/*-----------------------skills--------------------*/
+.skills{
+	font-size: 12px;
+	line-height: 22px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+	padding-top: 1px;
+}
+
+.skills-title{
+	font-size: 18px;
+	line-height: 22px;
+	color: #010101;
+	outline: 0px solid blue;
+	margin-bottom: 22px;
+}
+
+.skills-label{
+	
+}
+
+.skills-list{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+}
+
+.skills-list li{
+	display: inline-block;
+	width: 140px;
+	height: 22px;
+	margin-bottom: 36px;
+	margin-right: 20px;
+	font-size: 12px;
+}
+
+.skills-list li:nth-child(4n){
+	margin-right: 0px;
+}
+
+.skills-checkbox{
+	display: none;
+}
+
+.skills-label{
+	display: inline-block;
+	padding-left: 27px;
+	height: 22px;
+	cursor: pointer;
+	position: relative;
+}
+
+.skills-label:hover{
+	color: #000;
+}
+
+.skills-indicator{
+	position: absolute;
+	left: 0;
+	top: 0px;
+	height: 19px;
+	width: 19px;
+	background-color: #EEE;
+	border-radius: 5px;
+}
+
+.skills-checkbox:checked + .skills-indicator{
+	background-color: #0093D7;
+}
+	
+.skills-checkbox:checked + .skills-indicator::before{
+	content: "";
+	position: absolute;
+	width: 12px;
+	height: 2px;
+	background-color: #FFF;
+	top: 8px;
+	right: 2px;
+}
+
+.skills-checkbox:checked + .skills-indicator::after{
+	content: "";
+	position: absolute;
+	width: 6px;
+	height: 2px;
+	background-color: #FFF;
+	top: 11px;
+	left: 2px;
+}
+
+.skills-checkbox:checked + .skills-indicator::before{
+	transform: rotate(-45deg);
+}
+
+.skills-checkbox:checked + .skills-indicator::after{
+	transform: rotate(45deg);
+}
+
+.skills-field{
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: 0px solid blue;
+	margin-top: 32px;
+}
+
+/*-----------------------javascript--------------------*/
+.javascript{
+	font-size: 12px;
+	line-height: 22px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+	padding: 55px 0;
+	min-height: 130px;
+}
+
+.javascript-speed{
+	width: 300px;
+	float: left;
+	margin-right: 20px;
+	outline: 0px solid blue;
+}
+
+.javascript-procent{
+	width: 300px;
+	float: left;
+	outline: 0px solid blue;
+}
+
+.javascript-field{
+	font-size: 18px;
+	line-height: 24px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+	text-transform: none;
+	margin: 0;
+	margin-bottom: 28px;
+	color: #010101;
+}
+
+.javascript-value{
+	font-size: 50px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #0093d7;
+}
+
+.javascript::after{
+	content: "";
+	display: table;
+	clear: both;
+}
