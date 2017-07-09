@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Документ без названия</title>
+</head>
+
+<body>
+	<canvas id="canvas" height="136" width="254" style="outline: 0px solid red"></canvas>
+    <script>
+    	var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+		
+		// general settings
+		var middleX = canvas.width / 2;
+		var middleY = canvas.height - canvas.width / 30;
+		var radius = canvas.width / 2 - canvas.width / 10;
+		
+		// beginning and ending of our arc. Sets by rad * pi
+		var startAngleIndex = 1;
+		var endAngleIndex = 2;
+		
+		// zones settings
+		var zoneLineWidth = canvas.width / 5;
+		var counterClockwise = false;
+		
+		// Center circle settings
+		var centerCircleRadius = canvas.width / 30;
+		var centerCircleColor = "#3e3d40";
+		
+		// Arrow settings
+		var arrowValueIndex = 1.2;
+		var arrowColor = "#3e3d40";
+		var arrowWidth = canvas.width / 50;
+		
+		// Digits settings
+		var digits = [0, 20, 40, 60, 80, 100, 120, 140, 160, 180];
+		var digitsOffsetFromArc = canvas.width / 12;
+		
+		var zonesCount = digits.length - 1;
+		var step = (endAngleIndex - startAngleIndex) / zonesCount;
+	
+		
+		var DrawZones = function() {
+        var greenZonesCount = Math.ceil(zonesCount / 3);
+        var yellowZonesCount = Math.ceil(zonesCount / 3);
+        var redZonesCount = Math.ceil(zonesCount / 3);
+
+        var startAngle = startAngleIndex * Math.PI;
+        var endGreenAngle = (startAngleIndex + greenZonesCount * step) * Math.PI;
+        var endYellowAngle = (startAngleIndex + (greenZonesCount + yellowZonesCount) * step) * Math.PI;
+        var endRedAngle = endAngleIndex * Math.PI;
+
+        var sectionOptions = [
+            {
+                startAngle: startAngle,
+                endAngle: endGreenAngle - step/2,
+                color: "#090"
+            },
+            {
+                startAngle: endGreenAngle,
+                endAngle: endYellowAngle - step/2,
+                color: "#cc0"
+            },
+            {
+                startAngle: endYellowAngle,
+                endAngle: endRedAngle,
+                color: "#900"
+            }
+        ];
+
+        this.DrawZone = function(options) {
+            ctx.beginPath();
+            ctx.arc(middleX, middleY, radius, options.startAngle, options.endAngle, counterClockwise);
+            ctx.lineWidth = zoneLineWidth;
+            ctx.strokeStyle = options.color;
+            ctx.lineCap = "butt";
+            ctx.stroke();
+        };
+
+        sectionOptions.forEach(function(options) {
+            DrawZone(options);
+        });
+    };
+	
+	
+		var DrawArrow = function() {
+			var arrowAngle = arrowValueIndex * Math.PI;
+			var toX = middleX + (radius/1.5) * Math.cos(arrowAngle);
+			var toY = middleY + (radius/1.5) * Math.sin(arrowAngle);
+			ctx.beginPath();
+			ctx.moveTo(middleX, middleY);
+			ctx.lineTo(toX, toY);
+			ctx.strokeStyle = arrowColor;
+			ctx.lineWidth = arrowWidth;
+			ctx.stroke();
+		};
+		
+		var DrawCenterCircle = function() {
+			ctx.beginPath();
+			ctx.arc(middleX, middleY, centerCircleRadius, 0, 2 * Math.PI, false);
+			ctx.fillStyle = centerCircleColor;
+			ctx.fill();
+		};
+		
+		DrawZones();
+		DrawArrow();
+		DrawCenterCircle();
+    </script>
+
+</body>
+</html>
