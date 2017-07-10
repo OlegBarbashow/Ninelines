@@ -3,7 +3,8 @@ var ctx = canvas.getContext("2d");
 
 var speedValue = document.querySelector('.javascript-value');
 
-// general settings
+
+// main settings
 var middleX = canvas.width / 2;
 var middleY = canvas.height - canvas.width / 30;
 var radius = canvas.width / 2 - canvas.width / 10;
@@ -95,8 +96,10 @@ var DrawCenterCircle = function() {
 	ctx.fill();
 };
 
+// arrow and text value
+speedValue.textContent = 1.2 * 100 - 100;
+
 DrawZones();
 DrawArrow();
 DrawCenterCircle();
 
-speedValue.textContent = arrowValueIndex * 100 - 100;
