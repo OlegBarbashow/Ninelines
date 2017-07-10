@@ -18,9 +18,8 @@
 .partition{
 	margin-bottom: 2px;
 	padding: 0 20px;
-	background-repeat: repeat;
 	min-height: 250px;
-	background-image: url(../img/wrapper-bg.jpg);
+	background: url(../img/wrapper-bg.jpg) repeat;
 }
 
 
@@ -67,8 +66,6 @@
 	content: "";
 	height: 166px;
 	width: 184px;
-	background-image: url(../img/approved.png);
-	background-repeat: no-repeat;
 }
 
 .personal-item{
@@ -118,7 +115,7 @@
 }
 
 .skills-list li:nth-child(4n){
-	margin-right: 0px;
+	margin-right: 0;
 }
 
 .skills-checkbox{
@@ -140,7 +137,7 @@
 
 .skills-indicator{
 	position: absolute;
-	top: 0px;
+	top: 0;
 	left: 0;
 	width: 19px;
 	height: 19px;
@@ -175,16 +172,20 @@
 }
 
 .skills-checkbox:checked + .skills-indicator::before{
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
 	transform: rotate(-45deg);
 }
 
 .skills-checkbox:checked + .skills-indicator::after{
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
 
+
 .skills-field{
-	margin: 0;
-	margin-top: 32px;
+	margin: 32px 0 0;
 	padding: 0;
 	border: none;
 	
@@ -208,14 +209,13 @@
 	width: 300px;	
 }
 
-.javascript-procent{
+.javascript-percent{
 	float: left;
 	width: 300px;
 }
 
 .javascript-field{
-	margin: 0;
-	margin-bottom: 28px;
+	margin: 0 0 28px;
 	font-family: 'Roboto', sans-serif;
 	font-weight: normal;
 	font-size: 18px;
@@ -236,4 +236,8 @@
 	display: table;
 	content: "";
 	clear: both;
+}
+
+.javascript-live{
+	display: none;
 }

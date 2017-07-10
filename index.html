@@ -3,9 +3,13 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href=css/normalize.css type="text/css" charset="utf-8" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:500,900&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/sprites.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <!--link href="https://fonts.googleapis.com/css?family=Roboto:500,900&amp;subset=cyrillic" rel="stylesheet"-->
     <link rel="stylesheet" href=css/style.css type="text/css" charset="utf-8" />
-    <title>Portfolio</title>
+    <title>Resume</title>
+
+
 </head>
 <body class="page">
     <div class="wrapper">
@@ -15,7 +19,7 @@
             </div>
             <ul class="personal-items">
                 <li class="personal-item">Имя</li>
-                <li class="personal-item">Дата рождения</il>
+                <li class="personal-item">Дата рождения</li>
                 <li class="personal-item">Город</li>
                 <li class="personal-item">Контактные данные</li>
             </ul>
@@ -40,7 +44,7 @@
                     </li>
                     <li>
                         <label class="skills-label">
-                            <input class="skills-checkbox" type="checkbox" name="vANILLAJS">
+                            <input class="skills-checkbox" type="checkbox" name="VANILLAJS">
                             <span class="skills-indicator"></span>
                             vANILLAJS
                         </label>
@@ -113,15 +117,16 @@
         </main>
         <section class="javascript partition">
             <div class="javascript-speed">
-            	<img src="img/speed.png" height="133" width="254" alt="Уровень JS" style="display: none">
-                <canvas id="canvas" height="136" width="254" style="outline: 0px solid red"></canvas>
+            	<img src="img/speed.png" class="javascript-hidden" height="133" width="254" alt="Уровень JS">
             </div>
-            <div class="javascript-procent">
+            <div class="javascript-percent">
                 <p class="javascript-field">Мой уровень владения<br> Java Script</p>
-                <span class="javascript-value">95</span>
+                <span class="javascript-value">20</span>
             </div>
         </section>
     </div>
+
+    <script src="js/progressiveImprovement.js"></script>
     <script src="js/speed.js"></script>
 </body>
 </html>

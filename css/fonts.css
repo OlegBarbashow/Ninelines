@@ -1,4 +1,8 @@
-@font-face{ 
-	font-family: 'Roboto-Medium-webfont';
-	src: url(../fonts/roboto_medium_macroman/Roboto-Medium-webfont.woff) format('woff');	
+@font-face {
+    font-family: 'robotomedium';
+    src: url('../fonts/roboto-medium-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
