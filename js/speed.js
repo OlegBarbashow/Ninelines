@@ -22,7 +22,7 @@ var centerCircleRadius = canvas.width / 30;
 var centerCircleColor = "#3e3d40";
 
 // Arrow settings
-var arrowValueIndex = 1.2;
+var arrowValueIndex = 1.3;
 var arrowColor = "#3e3d40";
 var arrowWidth = canvas.width / 50;
 
@@ -97,9 +97,8 @@ var DrawCenterCircle = function() {
 };
 
 // arrow and text value
-speedValue.textContent = 1.2 * 100 - 100;
+speedValue.textContent = arrowValueIndex * 100 - 100;
 
 DrawZones();
 DrawArrow();
 DrawCenterCircle();
-
